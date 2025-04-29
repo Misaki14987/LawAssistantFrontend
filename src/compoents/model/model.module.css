@@ -1,0 +1,194 @@
+/* 容器样式与首页统一 */
+.container {
+  border-radius: 0.75rem;
+  width: 90%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  margin: 2rem auto;
+  background-color:var(--gradient-end);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 标题样式与首页标题一致 */
+.header {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  opacity: 0.9;
+}
+
+/* 树容器匹配首页卡片样式 */
+.treeContainer {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  isolation: isolate; 
+  padding: 16px;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  max-height: 50vh;
+  min-height: 20vh;
+  backdrop-filter: blur(15px);
+}
+
+treeContainer::-webkit-scrollbar {
+  display: none;
+}
+
+/* 节点交互色与首页按钮色统一 */
+.nodeContent:hover {
+  background: #f1f5f9;
+}
+
+.folderIcon {
+  color: #3b82f6; /* 主品牌蓝色 */
+}
+
+
+.copyButton {
+  background: #e2e8f0;
+  color: #1e293b;
+  &:hover {
+    background: #2563eb;
+  }
+}
+
+/* 弹窗样式与首页模态框统一 */
+.detailModal {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.previewArea {
+  border-color: #e2e8f0;
+  background: #f8fafc;
+}
+
+.treeNode {
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.nodeContent {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.nodeContent:hover {
+  background: var(--gradient-end);
+}
+
+.toggleIcon {
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.nodeIcon {
+  color: #6b7280;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.nodeName {
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.fileMeta {
+  color: #6b7280;
+  font-size: 0.9em;
+  margin-left: 8px;
+}
+
+/* 详情弹窗样式 */
+.detailModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  width: 60%;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  font: 600 1.4rem sans-serif;
+  color: #254c74;
+  border-bottom: 1px solid #eee;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: #666;
+}
+
+.previewArea {
+  height: 400px;
+  border: 1px solid #eee;
+  margin: 1rem 0;
+  padding: 0.3rem 0.5rem;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  justify-content: flex-end;
+}
+
+.copyButton {
+  background: #3b82f6;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.modalContent{
+  padding: 1rem;
+}
+
+.previewArea h1 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.previewArea h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.previewArea h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.previewArea ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.previewArea strong {
+  font-size: 1rem;
+  font-weight: 500;
+}

@@ -80,6 +80,19 @@ const ChatBox = ({
         theme: currentTheme,
       });
 
+      // const reader = data.body.getReader();
+      // const decoder = new TextDecoder();
+      // while (true) {
+      //   const {done, value} = await reader.read();
+      //   if (done) {
+      //     break;
+      //   }
+      //   const response = decoder.decode(value);
+      //   const aiResponse = JSON.parse(response).message;
+      //   console.log(aiResponse);
+        
+      // }
+
       let aiResponse = "";
       if (typeof data.data === "string") {
         aiResponse = data.data;

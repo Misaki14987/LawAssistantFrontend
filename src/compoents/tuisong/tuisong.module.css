@@ -1,12 +1,7 @@
 .adContainer {
-    width: 300px;
-    padding: 20px;
+    width: 100%;
+    padding: 1rem;
     perspective: 1000px;
-    top: 100px;
-    left: 50px;
-    margin: 0 60px;
-    margin-top: 70px;
-    padding: 20px;
     transition: all 0.5s ease;
     opacity: 0;
     pointer-events: none;

@@ -19,7 +19,6 @@ function App() {
           <Route path="/" element={<Home/>} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register/>} />
-          
           {/* 受保护的路由 - 需要登录才能访问 */}
           <Route path="/chat" element={
             <ProtectedRoute>

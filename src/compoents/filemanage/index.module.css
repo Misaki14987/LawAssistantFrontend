@@ -49,6 +49,16 @@ html {
     position: relative;
 }
 
+.sidebar {
+    margin: 0 2rem;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 20rem;
+    align-items: center;
+}
+
 .logo {
     display: flex;
     justify-content: center;

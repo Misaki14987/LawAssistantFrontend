@@ -6,6 +6,7 @@ import { BiChevronRight } from "react-icons/bi";
 import { LuDownload } from "react-icons/lu";
 import { Link, useNavigate } from "react-router";
 import AdBanner from "../tuisong/tuisong.tsx";
+import TemplateLibrary from "../model/model.tsx";
 type Headers = {
   id: number;
   content: string;
@@ -53,7 +54,6 @@ const Headers: React.FC<HeadersProps> = ({
   const navigate = useNavigate();
   const list: Headers[] = [
     { id: 1, content: "法律法规", pick: check === 1 },
-    { id: 2, content: "法学期刊", pick: check == 2 },
     { id: 3, content: "法律AI", pick: check == 3 },
     { id: 4, content: "法律咨询", pick: check == 4 },
   ];
@@ -210,11 +210,11 @@ const Search: React.FC<SearchProps> = ({ setsearch }) => {
 
     // 准备搜索参数
     const params = {
-      Keywords: searchParams.keyword,
-      Category: searchParams.fileType,
-      StartDate: searchParams.startDate,
-      EndDate: searchParams.endDate,
-      Filename: "",
+      keywords: searchParams.keyword,
+      category: searchParams.fileType,
+      start_date: searchParams.startDate+"T19:58:39.699+08:00",
+      end_date: searchParams.endDate+"T19:58:39.699+08:00",
+      filename: ""
     };
 
     // 调用父组件搜索逻辑
@@ -273,7 +273,6 @@ const Search: React.FC<SearchProps> = ({ setsearch }) => {
               <option value="txt">txt</option>
               <option value="pdf">PDF</option>
               <option value="docx">docx</option>
-              <option value="doc">doc</option>
             </select>
           </div>
         </div>
@@ -393,7 +392,10 @@ const Index = () => {
         <Search setsearch={setsearch} token={localStorage.getItem("token")} />
       )}
       <div className={Style.banner}>
-        <AdBanner token={localStorage.getItem("token")} />
+        <div className={Style.sidebar}>
+          <AdBanner token={localStorage.getItem("token")} />
+          <TemplateLibrary/>
+        </div>
         <div className={Style.content}>
           <div className={Style.list}>
             <div className={Style.total}>Total: {search.total}</div>
